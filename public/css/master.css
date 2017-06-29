@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Sniglet', cursive;
+}
+
+body {
+  background-color: #ecf0f1;
+}
+img {
+  width: 5vw;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
