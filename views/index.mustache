@@ -13,11 +13,35 @@
         <ul>
           <li><a href="/"><img src="https://s-media-cache-ak0.pinimg.com/originals/28/a9/b9/28a9b9e4ae73db5ed43154d01c5b413f.png" alt="lauging face"></a></li>
           <li><a href="/create">Create New Gab</a></li>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/login">Log Out</a></li>
+          <li>Welcome back, {{username}}! <a href="/login">{{^username}}Log In{{/username}}</a></li>
+          <li><a href="/signup">{{^username}}Sign Up{{/username}}</a></li>
+          <form class="" action="/logout" method="post">
+          <input type="submit" name="logout" value="Log Out">
+          </form>
         </ul>
       </div>
     </header>
+    <main>
+      <div class="main-tile">
+      <h1>Welcome to the Gabbleverse, {{username}}!</h1>
+      </div>
+      <div class="gabbles">
+        {{#gabbles}}
+        <div class="individual-gabs">
+          {{username}}:
+          <p>
+            {{message}}
+          </p>
+        <div class="date">
+          {{createdAt}}
+        </div>
+        <div class="likes">
+          <button type="button" name="like">Like</button>
+        </div>
+        </div>
+        {{/gabbles}}
+      </div>
+    </main>
 
     <script src="/js/client.js" charset="utf-8"></script>
   </body>

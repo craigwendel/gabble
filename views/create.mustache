@@ -13,22 +13,29 @@
         <ul>
           <li><a href="/"><img src="https://s-media-cache-ak0.pinimg.com/originals/28/a9/b9/28a9b9e4ae73db5ed43154d01c5b413f.png" alt="lauging face"></a></li>
           <li><a href="/create">Create New Gab</a></li>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/login">Log Out</a></li>
+          <li>Welcome back, {{username}}! <a href="/login">{{^username}}Log In{{/username}}</a></li>
+          <form class="" action="/logout" method="post">
+          <input type="submit" name="logout" value="Log Out">
+          </form>
         </ul>
       </div>
     </header>
+    <main>
       <h1>Create a new Gab</h1>
+      {{#errors}}
+          <li>{{message}}</li>
+      {{/errors}}
       <div class="create-form">
-        <form class="create-page" action="/login" method="post">
+        <form class="create-page" action="/create" method="post">
           <div class="create-gab">
-            <textarea name="create" rows="15" cols="80" placeholder="What's on your mind?"></textarea>
+            <textarea name="message" rows="15" cols="80" placeholder="What's on your mind, {{username}}?"></textarea>
           </div>
             <div class="submitgab">
               <input type="submit" name="submitgab" value="Save Gab">
             </div>
         </form>
       </div>
+    </main>
 
     <script src="/js/client.js" charset="utf-8"></script>
   </body>

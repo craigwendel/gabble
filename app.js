@@ -10,5 +10,5 @@ app.listen(3000, function () {
   console.log('Gabble is on! http://0.0.0.0:3000')
 })
 
-const routes = require('./routes/index')
+const routes = require('./routes/main')
 app.use('/', routes)

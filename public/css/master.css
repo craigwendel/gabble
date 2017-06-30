@@ -1,10 +1,13 @@
 * {
+  margin: auto 0;
   box-sizing: border-box;
   font-family: 'Sniglet', cursive;
 }
-
 body {
   background-color: #ecf0f1;
+}
+header {
+  background-color: #3498db;
 }
 img {
   width: 5vw;
@@ -12,5 +15,31 @@ img {
 .nav-bar ul {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   list-style: none;
+}
+.nav-bar ul a {
+  color: #ecf0f1;
+}
+.nav-bar li {
+  color: #ecf0f1;
+}
+.gabbles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3498db;
+  margin: 3%;
+  padding: 5%;
+  width: 55%;
+}
+.likes {
+  margin-bottom: 5%;
+}
+.individual-gabs {
+  margin-bottom: 5%;
+  background-color: #fff;
+}
+.individual-gabs p {
+  color: #000000;
 }
