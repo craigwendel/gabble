@@ -12,6 +12,10 @@ header {
 img {
   width: 5vw;
 }
+h1 {
+  margin: 2% 5% 0% 2%;
+  text-align: center;
+}
 .nav-bar ul {
   display: flex;
   justify-content: space-around;
@@ -27,19 +31,68 @@ img {
 .gabbles {
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: #3498db;
-  margin: 3%;
-  padding: 5%;
-  width: 55%;
+  margin: 0% 3% 0% 3%;
+  padding: 5% 15%;
 }
 .likes {
-  margin-bottom: 5%;
+   margin-top: 2%;
+}
+.date {
+  margin-top: 2%;
 }
 .individual-gabs {
   margin-bottom: 5%;
   background-color: #fff;
+  padding: 2% 5% 2% 5%;
 }
 .individual-gabs p {
   color: #000000;
+  margin-top: 2%;
+}
+form input[type='submit'] {
+  background-color: #3498db;
+  font-size: .9rem;
+  color: #ecf0f1;
+  border-radius: 10px;
+  border: 1px solid #ecf0f1;
+  padding: 1%;
+}
+form.logout input[type='submit'] {
+  border: 2px solid #fff;
+  padding: 8%;
+}
+form.like input[type='submit'] {
+  border: 1px solid #fff;
+}
+.login-form form {
+  margin: 2% 5%;
+}
+.login-form input {
+  padding: 1%;
+  width: 30%;
+  margin-bottom: 1%;
+}
+.username {
+  margin: 1%;
+}
+.password {
+  margin: 1%;
+}
+.signup-for-gabble {
+  margin-left: 5%;
+}
+.login-form input[type='submit'] {
+  width: 10%;
+}
+.create-form {
+  text-align: center;
+  margin: 2%;
+}
+.create-form input[type='submit'] {
+  margin-top: 2%;
+}
+textarea {
+  padding: 1%;
+  font-size: 1rem;
 }

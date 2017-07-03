@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/master.css">
     <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
     <link rel="icon" type="img/png" href="/images/gabblefavicon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   </head>
   <body>
     <header>
@@ -15,7 +16,7 @@
           <li><a href="/create">Create New Gab</a></li>
           <li>Welcome back, {{username}}! <a href="/login">{{^username}}Log In{{/username}}</a></li>
           <li><a href="/signup">{{^username}}Sign Up{{/username}}</a></li>
-          <form class="" action="/logout" method="post">
+          <form class="logout" action="/logout" method="post">
           <input type="submit" name="logout" value="Log Out">
           </form>
         </ul>
@@ -36,7 +37,9 @@
           {{createdAt}}
         </div>
         <div class="likes">
-          <button type="button" name="like">Like</button>
+          <form class="like" action="/like" method="post">
+            <input type="submit" name="like" value="Like">
+          </form>
         </div>
         </div>
         {{/gabbles}}

@@ -19,7 +19,7 @@ let sess =
 router.get('/', function (req, res) {
   sess = req.session
   if (sess.username) {
-    models.Gab.findAll().then(function (gabbles) {
+    models.Gab.findAll({order: [['createdAt', 'DESC']]}).then(function (gabbles) {
       res.render('index', {username: sess.username, gabbles: gabbles})
     })
   } else {
