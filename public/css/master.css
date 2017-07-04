@@ -79,6 +79,9 @@ form.like input[type='submit'] {
 .password {
   margin: 1%;
 }
+.email {
+  margin: 1%;
+}
 .signup-for-gabble {
   margin-left: 5%;
 }
@@ -95,4 +98,17 @@ form.like input[type='submit'] {
 textarea {
   padding: 1%;
   font-size: 1rem;
+}
+.signup-form input {
+  padding: 1%;
+  width: 30%;
+  margin-bottom: 1%;
+  font-size: .9rem;
+}
+.signup-form form {
+  margin: 2% 5%;
+}
+.signup-form input[type='submit'] {
+  width: 20%;
+  margin: 0% 1%;
 }

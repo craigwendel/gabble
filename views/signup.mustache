@@ -16,7 +16,7 @@
           <li><a href="/create">Create New Gab</a></li>
           <li><a href="/login">Log In</a></li>
           <li><a href="/signup">Sign Up</a></li>
-          <form class="" action="/logout" method="post">
+          <form class="logout" action="/logout" method="post">
           <input type="submit" name="logout" value="Log Out">
           </form>
         </ul>
@@ -24,35 +24,35 @@
     </header>
     <main>
       <h1>Sign Up for Gabble</h1>
+      <div class="errors">
+        {{#errors}}
+        <li>{{message}}</li>
+        {{/errors}}
+      </div>
       <div class="signup-form">
-        <div class="errors">
-          {{#errors}}
-          <li>{{message}}</li>
-          {{/errors}}
-        </div>
         <form class="signup-page" action="/signup" method="post">
           <div class="username">
             <label for="username"> Your Username</label>
           </div>
-          <div class="">
+          <div class="username">
             <input type="text" name="username" value="{{user.username}}" placeholder="Enter a new username">
           </div>
           <div class="email">
             <label for="email">Your Email</label>
           </div>
-          <div class="">
+          <div class="email">
             <input type="text" name="email" value="{{user.email}}" placeholder="Enter your email">
           </div>
           <div class="password">
             <label for="password">Your Password</label>
           </div>
-          <div class="">
+          <div class="password">
             <input type="password" name="password" value="" placeholder="Enter a new password">
           </div>
-          <div class="confirmpassword">
+          <div class="password">
             <label for="">Confirm Your Password</label>
           </div>
-          <div class="">
+          <div class="password">
             <input type="password" name="confirmpassword" value="" placeholder="Confirm your password">
           </div>
           <div class="signup">
