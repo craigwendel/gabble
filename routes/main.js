@@ -19,8 +19,15 @@ let sess =
 router.get('/', function (req, res) {
   sess = req.session
   if (sess.username) {
-    models.Gab.findAll({order: [['createdAt', 'DESC']]}).then(function (gabbles) {
-      res.render('index', {username: sess.username, gabbles: gabbles})
+    models.Gab.findAll({order: [['createdAt', 'DESC']],
+      include: [{
+        model: models.Like,
+        as: 'like'
+      }]
+    })
+    .then(function (gabbles) {
+      res.render('index', {username: sess.username,
+        gabbles: gabbles})
     })
   } else {
     res.redirect('/login')
@@ -94,6 +101,17 @@ router.post('/create', function (req, res) {
     res.render('signup',
       { errors: error.errors
       })
+  })
+})
+router.post('/like', function (req, res) {
+  sess = req.session
+  const like = models.Like.build({
+    username: sess.username,
+    gabId: req.body.like
+  })
+  like.save()
+  .then(function () {
+    res.redirect('/')
   })
 })
 

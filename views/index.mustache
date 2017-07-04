@@ -38,8 +38,9 @@
         </div>
         <div class="likes">
           <form class="like" action="/like" method="post">
-            <input type="submit" name="like" value="Like">
+            <button type="submit" name="like" value={{id}}>Like</button>
           </form>
+          <span>Likes: {{like.length}}</span>
         </div>
         </div>
         {{/gabbles}}

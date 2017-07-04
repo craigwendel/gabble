@@ -14,5 +14,9 @@ module.exports = function(sequelize, DataTypes) {
     }
   }, {});
 
+  Gab.associate = function (models) {
+    Gab.hasMany(models.Like, {as: 'like', foreignKey: 'gabId'})
+  }
+
   return Gab;
 };

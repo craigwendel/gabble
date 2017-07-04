@@ -58,6 +58,15 @@ form input[type='submit'] {
   border: 1px solid #ecf0f1;
   padding: 1%;
 }
+button {
+  background-color: #3498db;
+  font-size: .9rem;
+  color: #ecf0f1;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 1%;
+  margin-bottom: 1%;
+}
 form.logout input[type='submit'] {
   border: 2px solid #fff;
   padding: 8%;
