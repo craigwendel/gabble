@@ -23,31 +23,30 @@
       </div>
     </header>
     <main>
-      <div class="main-tile">
-      <h1>Welcome to the Gabbleverse, {{username}}!</h1>
+    <div class="gabbles">
+      {{#gabbles}}
+      <div class="individual-gabs">
+        <a href="/">{{username}}</a>
+        <p>
+          {{message}}
+        </p>
+      <div class="date">
+        {{createdAt}}
       </div>
-      <div class="gabbles">
-        {{#gabbles}}
-        <div class="individual-gabs">
-          <a  href="/profile/{{username}}">{{username}}</a>
-          <p>
-            <a href="/messages/{{id}}">{{message}}</a>
-          </p>
-        <div class="date">
-          {{createdAt}}
-        </div>
-        <div class="likes">
-          <form class="like" action="/like" method="post">
-            <button type="submit" name="like" value={{id}}>Like</button>
-          </form>
-          <spap\n>{{^like}}No likes yet.{{/like}}
-          Likes: {{like.length}}</span>
-        </div>
-        </div>
-        {{/gabbles}}
+      <div class="likes">
+        <h4>Liked by:</h4>
+        {{#like}}
+        <p>{{username}}</p>
+        {{/like}}
       </div>
-    </main>
+      </div>
+      {{/gabbles}}
+      <div class="">
+        <h4><a href="/">Back to Homepage</a></h4>
+      </div>
+    </div>
+  </main>
 
-    <script src="/js/client.js" charset="utf-8"></script>
-  </body>
+  <script src="/js/client.js" charset="utf-8"></script>
+</body>
 </html>

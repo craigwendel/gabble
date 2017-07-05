@@ -50,6 +50,14 @@ h1 {
   color: #000000;
   margin-top: 2%;
 }
+.individual-gabs p a {
+  text-decoration: none;
+  color: #34495e;
+}
+.individual-gabs a {
+  text-decoration: none;
+  color: #3498db
+}
 form input[type='submit'] {
   background-color: #3498db;
   font-size: .9rem;
