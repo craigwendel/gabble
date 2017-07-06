@@ -82,6 +82,10 @@ form.logout input[type='submit'] {
 form.like input[type='submit'] {
   border: 1px solid #fff;
 }
+form.delete button[type='submit'] {
+  border: 1px solid #fff;
+  background-color: #e74c3c;
+}
 .login-form form {
   margin: 2% 5%;
 }

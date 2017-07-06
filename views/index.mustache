@@ -38,10 +38,13 @@
         </div>
         <div class="likes">
           <form class="like" action="/like" method="post">
-            <button type="submit" name="like" value={{id}}>Like</button>
+            <span><button type="submit" name="like" value={{id}}>Like</button>
           </form>
-          <spap\n>{{^like}}No likes yet.{{/like}}
-          Likes: {{like.length}}</span>
+          <form class="delete" action="/delete/{{id}}" method="post">
+            <button type="submit" name="delete" value="{{id}}">Delete</button></span>
+          </form>
+          <!-- <span>{{^like.length}}No likes yet.{{/like.length}} -->
+          <span>Likes: {{like.length}}</span>
         </div>
         </div>
         {{/gabbles}}

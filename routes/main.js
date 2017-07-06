@@ -157,6 +157,21 @@ router.post('/like', function (req, res) {
     res.redirect('/')
   })
 })
+router.post('/delete/:id', function (req, res) {
+  sess = req.session
+  models.Gab.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function (gab) {
+    models.Gab.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    res.redirect('/')
+  })
+})
 
 router.post('/logout', function (req, res) {
   sess = req.session
