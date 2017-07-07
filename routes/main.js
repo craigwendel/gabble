@@ -26,6 +26,11 @@ router.get('/', function (req, res) {
       }]
     })
     .then(function (gabbles) {
+      for (var i = 0; i < gabbles.length; i++) {
+        if (gabbles[i].username === sess.username) {
+          gabbles[i].showDelete = true
+        }
+      }
       res.render('index', {
         username: sess.username,
         gabbles: gabbles

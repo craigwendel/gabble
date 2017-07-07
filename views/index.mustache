@@ -40,9 +40,11 @@
           <form class="like" action="/like" method="post">
             <span><button type="submit" name="like" value={{id}}>Like</button>
           </form>
+          {{#showDelete}}
           <form class="delete" action="/delete/{{id}}" method="post">
             <button type="submit" name="delete" value="{{id}}">Delete</button></span>
           </form>
+          {{/showDelete}}
           <!-- <span>{{^like.length}}No likes yet.{{/like.length}} -->
           <span>Likes: {{like.length}}</span>
         </div>
