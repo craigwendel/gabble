@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "8.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node_modules/sequelize-cli/bin/sequelize db:migrate"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +21,7 @@
     "moment": "^2.18.1",
     "mustache-express": "^1.2.5",
     "pg": "^6.4.0",
-    "sequelize": "^4.2.1"
+    "sequelize": "^4.2.1",
+    "sequelize-cli": "^2.7.0"
   }
 }
